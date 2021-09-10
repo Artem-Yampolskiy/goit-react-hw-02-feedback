@@ -1,25 +1,24 @@
 import PropTypes from 'prop-types';
-import styes from './FeedbackOptions.module.css';
+import styles from './FeedbackOptions.module.css';
 
 const FeedbackOptions = ({ options, onLeaveFeedback }) => {
-    return (
-        <>
-            <div className={StyleSheet.conteiner}>
-                {options.map(option => (
-                    <button
-                        type="button"
-                        key={option}
-                        onClick={() => {
-                            onLeaveFeedback(option);
-                        }}
-                        className={styes.button}>{option}</button>
-                    
-
-                ))
-                }
-            </div>
-        </>
-    );
+  return (
+    <>
+      <div className={styles.container}>
+        {options.map(option => (
+          <button
+            type="button"
+            key={option}
+            onClick={()=> onLeaveFeedback(option)
+            }
+            className={styles.button}
+          >
+            {option}
+          </button>
+        ))}
+      </div>
+    </>
+  );
 };
 
 FeedbackOptions.prototype = {

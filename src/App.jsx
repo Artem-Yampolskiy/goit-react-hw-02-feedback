@@ -37,8 +37,10 @@ class App extends Component {
         return (
             <>
                 <Section title="Please leave feedback">
-                    <FeedbackOptions options={Object.keys(state)}
-                        onleaveFeedback={incrementFeedback} />
+                    <FeedbackOptions
+                        options={Object.keys(state)}
+                        onleaveFeedback={incrementFeedback}
+                    />
                 </Section>
                 <Section title="Statistics">
                     {countTotalFeedback() > 0 ? (
