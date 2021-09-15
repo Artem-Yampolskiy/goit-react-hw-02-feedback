@@ -1,4 +1,5 @@
 import { Component } from 'react';
+
 import Statistics from './components/Statistics';
 import FeedbackOptions from './components/feedbackOptions';
 import Section from './components/Section';
@@ -39,7 +40,7 @@ class App extends Component {
                 <Section title="Please leave feedback">
                     <FeedbackOptions
                         options={Object.keys(state)}
-                        onleaveFeedback={incrementFeedback}
+                        onLeaveFeedback={incrementFeedback}
                     />
                 </Section>
                 <Section title="Statistics">
